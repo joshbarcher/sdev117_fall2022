@@ -3,24 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>My First Javascript Page</title>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="styles/styles.css">
 	</head>
 	<body>
-		<h1>Welcome to my page!</h1>
+		<h1 id="page-header">Welcome to my page!</h1>
 		<p id="output">...</p>
+		<img src="images/garfield.png" alt="A depiction of Garfield by Jim Davis!">
 
-		<script>
-			//print a message to the user!
-			alert("Hello, world!");
-
-            //print messages to the console (in your browser)
-			console.log("This message should be printed in the console");
-			console.log("Author: Josh Archer");
-
-            //update our page and show a message on the page
-			let paragraph = document.querySelector("#output");
-			paragraph.innerHTML = "This page built by Josh Archer";
-		</script>
+		<script src="scripts/working_with_strings.js"></script>
 	</body>
 </html>
 
