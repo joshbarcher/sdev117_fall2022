@@ -1,0 +1,12 @@
+body {
+    width: 960px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+img {
+    width: 100%;
+}
+
