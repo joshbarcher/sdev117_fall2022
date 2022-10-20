@@ -1,17 +1,13 @@
 //constants to replace our "magic numbers"
 const CANVAS_SIZE = 500;
 const RGB_MAX = 256;
-const NUM_LARGE = 30;
-const NUM_SMALL = 150;
-const LARGE_SIZE = 30;
-const SMALL_SIZE = 10;
 
 //get my canvas and the context of the canvas
 let canvas = document.getElementById("my-canvas");
 let context = canvas.getContext("2d");
 
-drawShapes(NUM_LARGE, LARGE_SIZE);
-drawShapes(NUM_SMALL, SMALL_SIZE);
+drawShapes(30, 150);
+drawShapes(40, 10);
 
 function drawShapes(numShapes, sizeOfBox)
 {

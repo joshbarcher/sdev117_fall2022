@@ -26,5 +26,27 @@ let colorNames = [
     "SeaShell", "Sienna", "Silver", "SkyBlue", "SlateBlue", "SlateGray",
     "SlateGrey", "Snow", "SpringGreen", "SteelBlue", "Tan", "Teal", "Thistle",
     "Tomato", "Turquoise", "Violet", "Wheat", "White", "WhiteSmoke", "Yellow",
-    "YellowGreen",
+    "YellowGreen"
 ];
+
+//select the body of the table
+let tableBody = document.querySelector("#color-table tbody");
+
+//loop over each color in the array
+for (let i = 0; i < colorNames.length; i++)
+{
+    let color = colorNames[i];
+    tableBody.innerHTML += `<tr><td>${color}</td><td style='background-color: ${color}'></td></tr>`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
