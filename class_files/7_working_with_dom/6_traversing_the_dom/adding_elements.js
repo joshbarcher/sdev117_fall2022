@@ -7,10 +7,25 @@ button.onclick = function() {
     let phone = prompt("Enter your phone number");
 
     //the quick and "hacky" way to do things
-    let row = `<tr><td>${name}</td><td>${email}</td><td>${phone}</td></tr>`;
+    //let row = `<tr><td>${name}</td><td>${email}</td><td>${phone}</td></tr>`;
     let tbody = document.querySelector("tbody");
-    tbody.innerHTML += row;
+    //tbody.innerHTML += row;
 
-    //the better way (more robust and flexible)
+    //create elements
+    let tr = document.createElement("tr");
+    let tdName = document.createElement("td");
+    let tdEmail = document.createElement("td");
+    let tdPhone = document.createElement("td");
 
+    //configure elements
+    tdName.textContent = name;
+    tdEmail.textContent = email;
+    tdPhone.textContent = phone;
+
+    //add the elements to the dom
+    tr.appendChild(tdName);
+    tr.appendChild(tdEmail);
+    tr.appendChild(tdPhone);
+
+    tbody.appendChild(tr);
 };
