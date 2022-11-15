@@ -21,7 +21,7 @@ window.onload = function() {
     let box = document.querySelector("div#box");
     box.onclick = function() {
         //start an interval-timer to animate the box
-        timer = window.setInterval(animate, 10);
+        timer = window.setInterval(animate, 100);
     };
 };
 
@@ -31,11 +31,18 @@ function animate()
 {
     let box = document.querySelector("div#box");
 
+    let r = Math.random() * 256;
+    let g = Math.random() * 256;
+    let b = Math.random() * 256;
+
+    let color = `rgb(${r},${g},${b})`;
+
     //increase the size of the box
-    boxSize += 1.5;
+    boxSize += 2.5;
 
     box.style.width = boxSize + "px"; //<--- needs to be 59px, 60px, 61px
     box.style.height = boxSize + "px";
+    box.style.backgroundColor = color;
 
     //stop the timer after some condition
     if (boxSize >= 300)
