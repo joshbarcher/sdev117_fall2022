@@ -21,9 +21,14 @@ function displayRandomCat()
             return response.json();
         })
         .then(function(data) {
-            let img = document.querySelector("#portrait");
+            console.log(data);
+
+            //let img = document.querySelector("#portrait");
+            let img = document.createElement("img");
             let source = data[0].url;
             img.src = source;
             img.alt = "A random cat picture!";
+
+            document.body.appendChild(img);
         });
 }
